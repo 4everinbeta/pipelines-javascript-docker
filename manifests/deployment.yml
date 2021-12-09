@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: everinbetapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: everinbetapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: everinbetapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: everinbetapipelinesjavascriptdocker 
+          image: pfstestacr.azurecr.io/everinbetapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
